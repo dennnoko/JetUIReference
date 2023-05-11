@@ -29,7 +29,7 @@ fun MainContentsList(
                 .padding(5.dp)
                 .width(200.dp)
                 .height(80.dp)
-                .border(3.dp, Color.Black),
+                .border(2.dp, Color.Black),
             colors = ButtonDefaults.buttonColors(
                 backgroundColor = co
             ),
@@ -47,9 +47,9 @@ fun MainContentsList(
                 .padding(5.dp)
                 .width(200.dp)
                 .height(80.dp)
-                .border(3.dp, Color.Black),
+                .border(2.dp, Color.Black),
             colors = ButtonDefaults.buttonColors(
-                backgroundColor = Color.Yellow
+                backgroundColor = co
             ),
             onClick = { navController.navigate(tostr2) } //画面遷移先をtostr2として渡しておく
         ) {

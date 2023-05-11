@@ -2,6 +2,8 @@ package com.example.jetuireference.Screen
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -14,7 +16,10 @@ import com.example.jetuireference.components.MainContentsList
 
 @Composable
 fun MainScreen(navController: NavController) {
-    Column {
+    Column(
+        modifier = Modifier
+            .verticalScroll(rememberScrollState())
+    ) {
         Spacer(modifier = Modifier.height(50.dp))
         //AppTitle
         AppTitle()
@@ -41,7 +46,9 @@ fun MainScreen(navController: NavController) {
 
         MainContentsList(navController = navController, str1 = "Layout", tostr1 = "columnRow", str2 = "Text", tostr2 = "text")
         MainContentsList(navController = navController, str1 = "Button", tostr1 = "button", str2 = "Image", tostr2 = "Image")
-        MainContentsList(navController = navController, str1 = "modifier", tostr1 = "modifier", str2 = "Screen transition", tostr2 = "moveScreen")
+        MainContentsList(navController = navController, str1 = "modifier", tostr1 = "modifier", str2 = "Screen transition", tostr2 = "navigation")
         MainContentsList(navController = navController, str1 = "Text field", tostr1 = "textField", str2 = "Checkbox", tostr2 = "checkbox")
+        
+        Spacer(modifier = Modifier.height(55.dp))
     }
 }

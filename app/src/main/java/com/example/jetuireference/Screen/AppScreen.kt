@@ -16,8 +16,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.jetuireference.DetailScreen.ColumnScreen
-import com.example.jetuireference.DetailScreen.RowScreen
+import com.example.jetuireference.DetailScreen.*
 
 @Composable
 fun AppScreen() {
@@ -52,11 +51,11 @@ fun AppScreen() {
             }
             
             composable("text") {
-                TextScreen(navController = navController)
+                TextScreen()
             }
             
             composable("button") {
-                ButtonScreen(navController = navController)
+                ButtonScreen()
             }
             
             composable("picture") {
@@ -70,6 +69,22 @@ fun AppScreen() {
 
             composable("row") {
                 RowScreen()
+            }
+
+            composable("box") {
+                BoxScreen()
+            }
+
+            composable("image") {
+                ImageScreen()
+            }
+
+            composable("modifier") {
+                ModifierScreen()
+            }
+
+            composable("navigation") {
+                ScreenTransitionScreen()
             }
         }
     }
