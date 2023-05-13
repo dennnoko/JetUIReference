@@ -2,10 +2,7 @@ package com.example.jetuireference.Screen
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
-import androidx.compose.material.BottomNavigation
-import androidx.compose.material.BottomNavigationItem
-import androidx.compose.material.Icon
-import androidx.compose.material.Scaffold
+import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Home
@@ -85,6 +82,14 @@ fun AppScreen() {
 
             composable("navigation") {
                 ScreenTransitionScreen()
+            }
+
+            composable("textField") {
+                TextFieldScreen()
+            }
+
+            composable("checkbox") {
+                CheckboxScreen()
             }
         }
     }
